@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Move example</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#block{
+			background-color: red;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			transition:  all .5s;
+			z-index: 2;
+		}
+
+		#hole{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 150px;
+			left: 500px;
+			background-color: black;
+			border-top-left-radius: 100px; 
+			border-top-right-radius: 100px;
+			z-index: 1;
+			transition: all 1s;
+		}
+	
+	</style>
+</head>
+<body>
+
+	<div id="block">
+		
+	</div>
+
+	<div id="hole">
+		
+	</div>
+
+	
+
+	<script type="text/javascript" src="js/moveExample.js"></script>
+</body>
+</html>
