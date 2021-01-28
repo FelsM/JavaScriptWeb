@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Events</title>
+	<style>
+		#myForm{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		#myForm * {
+			display: block;
+			margin: 10px 0;
+		}
+
+	</style>
+</head>
+<body>
+
+
+	<form id="myForm" name="myForm" action="">
+		<input type="text" name="name" value="">
+		<input type="number" name="age">
+		<input type="range" name="ageRange" min="0" max="20" step="2">
+		<select name="gender">
+			<option value="value1">Label 1</option>
+			<option value="value2">Label 2</option>
+			<option value="value3">Label 3</option>
+		</select>
+		<label for="agree">I agree with all terms and condotions
+		<input type="checkbox" name="agree">
+		</label>
+		
+
+		<input type="submit" value="Send">
+		
+
+	</form>
+	
+
+	<script type="text/javascript" src="js/formEvents.js"></script>
+</body>
+</html>
