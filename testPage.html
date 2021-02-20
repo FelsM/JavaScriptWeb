@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<h1>test page</h1>
+
+	<div id="chat">
+		
+	</div>
+
+
+
+
+	<script>
+		const chat = document.getElementById('chat');
+
+		window.addEventListener('message', function(event){
+			const message = document.createElement('p');
+			message.textContent = event.data;
+			chat.append(message)
+		})
+		
+	</script>
+</body>
+</html>

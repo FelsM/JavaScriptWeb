@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Graphics</title>
+	<style>
+		svg{
+			display: block;
+		}
+		#rect{
+			width: 100px;
+			height: 50px;
+			fill: green;
+			stroke: yellow;
+			stroke-width: 3px;
+			fill-opacity: 0.5;
+			stroke-opacity: 0.5;
+		}
+
+		#canv{
+			width: 800px;
+			height: 600px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- Scalable Vector Graphic -->
+
+	<svg width="300px" height="300px" id="rectangle">
+		<rect width="200" height="200px" fill="red" stroke="black" stroke-width="10px"/>
+		<rect x="50" y="50" rx="50" ry="10" id="rect"/>
+	</svg>
+
+	<svg width="300px" height="300px" id="circle">
+		<circle cx="200" cy="200" r="50" fill="none" stroke="red"/>
+	</svg>	
+
+	<svg width="300px" height="300px" id="ellipse">
+		<ellipse cx="200" cy="200" rx="50" ry="20" fill="violet" stroke="blue"/>
+		<ellipse cx="200" cy="190" rx="40" ry="10" fill="yellow" stroke="violet"/>
+		<ellipse cx="200" cy="180" rx="30" ry="5" fill="yellow" stroke="violet"/>
+	</svg>	
+
+
+	<svg width="300px" height="300px" id="line">
+		<line x1="10" y1="10" x2="290" y2="290" stroke="blue"/>
+		<circle cx="10" cy="10" r="10" fill="red" />
+		<circle cx="290" cy="290" r="10" fill="red" />
+	</svg>	
+
+
+	<svg width="300px" height="300px" id="polygon">
+		<polygon points="10,10 130,140 250,50 180,5" fill="lightblue"/>
+		<polygon points="30,30 230,30 100,120 150,5 200,120 30,30" fill="lightgreen" stroke="orange"/>
+	</svg>	
+
+	<svg width="300px" height="300px" id="polyline">
+		<polyline points="10,10 130,140 250,50 180,5" stroke="lightblue" fill="none"/>
+	</svg>
+
+	<svg width="300px" height="300px" id="path">
+		<!-- 
+			M - moveTo
+
+			L - lineTo
+			H - horizontalLineTo
+			C - curveTo
+			S - smoothCurveTo
+			Q - quadtric Bezier to 
+			T - smooth quadtric Bezier to
+			A - eliptical Arc
+			
+			Z - closePath
+
+		 -->
+		<path d="M10 10 L200 200 Z" fill="red" stroke="red"/>
+	</svg>
+
+
+	<svg width="300px" height="300px" id="text">
+		<text x="100" y="150" fill="orange">SVG 
+			<tspan x="100" y="170">text</tspan>
+		</text>
+	</svg>
+
+	<svg width="300px" height="300px">
+		<defs>
+			<filter id="filter1" x="0" y="0">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+			</filter>
+		</defs>
+
+		<rect width="200" height="200" fill="blue" filter="url(#filter1)" />
+		
+	</svg>
+
+
+	<canvas id="canv" width="800" height="600">
+		
+
+	</canvas>
+
+
+	<script type="text/javascript" src="js/graphics.js"></script>
+</body>
+</html>
